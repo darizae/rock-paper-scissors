@@ -42,7 +42,18 @@ function playRound() {
 
     alert("Computer choice is: " + computerChoice);
     const winnerOption = determineWinner(computerChoice, playerChoice);
-    return winnerOption;
+
+    switch (winnerOption) {
+        case computerChoice: 
+            alert(getLosingText(computerChoice, playerChoice));
+            return "computer";
+        case playerChoice: 
+            alert(getWinningText(computerChoice, playerChoice));
+            return "player";
+        default: 
+            alert("It's a tie!");
+            return "tie";
+    }
 }
 
 function determineWinner(choice1, choice2) {
@@ -55,4 +66,12 @@ function determineWinner(choice1, choice2) {
         case "rock-paper": return "paper";
         default: return "tie"; 
     }
+}
+
+function getLosingText(computerChoice, playerChoice) {
+    return `You lose! ${computerChoice} beats ${playerChoice}`;
+}
+
+function getWinningText(computerChoice, playerChoice) {
+    return `You win! ${playerChoice} beats ${computerChoice}`;
 }
