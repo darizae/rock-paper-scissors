@@ -1,7 +1,7 @@
 const button = document.getElementById('playButton');
 
 button.addEventListener("click", function() {
-    alert(getPlayerChoice());
+    alert(playRound());
 });
 
 //Choice options
@@ -34,4 +34,25 @@ function getPlayerChoice() {
 //Checks if passed in playing option is within the valid ones
 function checkInputValidity(str) {
     return (options.includes(str)) ? true : false;
+}
+
+function playRound() {
+    const computerChoice = getComputerChoice();
+    const playerChoice = getPlayerChoice();
+
+    alert("Computer choice is: " + computerChoice);
+    const winnerOption = determineWinner(computerChoice, playerChoice);
+    return winnerOption;
+}
+
+function determineWinner(choice1, choice2) {
+    switch (choice1 + "-" + choice2) {
+        case "rock-scissors": return "rock";
+        case "scissors-rock": return "rock";
+        case "scissors-paper": return "scissors";
+        case "paper-scissors": return "scissors";
+        case "paper-rock": return "paper";
+        case "rock-paper": return "paper";
+        default: return "tie"; 
+    }
 }
