@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/scipt.js" defer></script>
+    <script src="scripts/script.js" defer></script>
     <title>Rock Paper Scissors</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
 
     <div class="choose">
         <h2>Choose how many rounds you want to play:</h2>
-        <input type="text" id="roundsInput">
+        <input type="text" id="roundsInput" value="5">
     </div>
 
     <button id="playButton">Play</button>
@@ -24,20 +24,24 @@
     <div class="playing-ground">
         <div class="round-div">
             <h2 class="round-title">Round: 0</h2>
+            <h3 id="computer-choice"></h3>
+            <h3 id="updater"></h3>
             <div id="button-container">
-            <button class="choice-button">rock</button>
-            <button class="choice-button">paper</button>
-            <button class="choice-button">scissors</button>
+            <button class="choice-button">Rock</button>
+            <button class="choice-button">Paper</button>
+            <button class="choice-button">Scissors</button>
             </div>
         </div>
         <div class="second-div">
-            <div class="left-column">
+            <div class="point-tracker">
                 <h3 class="column-title">Your Points</h3>
-                <div class="points-container"></div>
+                <div class="points-container">
+                </div>
             </div>
-            <div class="right-column">
+            <div class="point-tracker">
                 <h3 class="column-title">Computer Points</h3>
-                <div class="points-container"></div>
+                <div class="points-container">
+                </div>
             </div>
         </div>
         
@@ -47,6 +51,5 @@
     <p id="computerPoints"> </p>
     <p id="playerPoints"> </p>
 
-    <script src="scripts/scipt.js"></script>
 </body>
 </html>

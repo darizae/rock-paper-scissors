@@ -1,5 +1,6 @@
 body {
-    background-image: url(../img/pexels-val-apollonio-5078204.jpg);
+    /*Photo by Val Apollonio: https://www.pexels.com/photo/aerial-view-of-an-ancient-colosseum-in-pula-5078204/*/
+    background-image: url(../img/pexels-val-apollonio-5078204.jpg); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,6 +44,10 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.round-title, #computer-choice, #updater {
+    display: inline-block;
+}  
 
 .round-div {
     width: 33.333%;
