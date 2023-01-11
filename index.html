@@ -4,10 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/scipt.js" defer></script>
     <title>Rock Paper Scissors</title>
 </head>
 <body>
+
+    <div class="header">
+        <h1>Welcome to Rock-Paper-Scissors!</h1>
+    </div>
+
+    <div class="choose">
+        <h2>Choose how many rounds you want to play:</h2>
+        <input type="text" id="roundsInput">
+    </div>
+
     <button id="playButton">Play</button>
+
+    <div class="playing-ground">
+        <div class="round-div">
+            <h2 class="round-title">Round: 0</h2>
+            <div id="button-container">
+            <button class="choice-button">rock</button>
+            <button class="choice-button">paper</button>
+            <button class="choice-button">scissors</button>
+            </div>
+        </div>
+        <div class="second-div">
+            <div class="left-column">
+                <h3 class="column-title">Your Points</h3>
+                <div class="points-container"></div>
+            </div>
+            <div class="right-column">
+                <h3 class="column-title">Computer Points</h3>
+                <div class="points-container"></div>
+            </div>
+        </div>
+        
+    </div>
+    
+
     <p id="computerPoints"> </p>
     <p id="playerPoints"> </p>
 
